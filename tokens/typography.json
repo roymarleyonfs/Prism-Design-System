@@ -1,0 +1,34 @@
+{
+  "font": {
+    "family": {
+      "sans": { "value": "Inter, sans-serif" },
+      "mono": { "value": "'Roboto Mono', monospace" }
+    },
+    "size": {
+      "h1":         { "web": "32px", "mobile": "24px" },
+      "h2":         { "web": "24px", "mobile": "20px" },
+      "h3":         { "web": "20px", "mobile": "18px" },
+      "body-lg":    { "web": "16px", "mobile": "16px" },
+      "body-md":    { "web": "14px", "mobile": "14px" },
+      "body-sm":    { "web": "13px", "mobile": "13px" },
+      "caption-md": { "web": "12px", "mobile": "12px" },
+      "caption-sm": { "web": "10px", "mobile": "10px" }
+    },
+    "weight": {
+      "bold":      { "value": 650 },
+      "semibold":  { "value": 550 },
+      "medium":    { "value": 550 },
+      "regular":   { "value": 450 }
+    },
+    "lineHeight": {
+      "h1":         { "value": "40px" },
+      "h2":         { "value": "30px" },
+      "h3":         { "value": "25px" },
+      "body-lg":    { "value": "20px" },
+      "body-md":    { "value": "18px" },
+      "body-sm":    { "value": "16px" },
+      "caption-md": { "value": "15px" },
+      "caption-sm": { "value": "12px" }
+    }
+  }
+}

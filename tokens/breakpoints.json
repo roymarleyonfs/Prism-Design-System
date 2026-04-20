@@ -1,0 +1,34 @@
+{
+  "breakpoint": {
+    "md": {
+      "nav-expanded":  { "min": "1440px", "max": "1920px" },
+      "nav-collapsed": { "min": "1440px", "max": "1920px" }
+    },
+    "lg": {
+      "nav-expanded":  { "min": "1921px", "max": "3440px" },
+      "nav-collapsed": { "min": "1921px", "max": "3440px" }
+    }
+  },
+  "grid": {
+    "md-nav-expanded": {
+      "1col": { "width": "71px",  "min": "71px",  "max": "111px" },
+      "2col": { "width": "165px", "min": "165px", "max": "245px" },
+      "3col": { "width": "260px", "min": "260px", "max": "354px" }
+    },
+    "md-nav-collapsed": {
+      "1col": { "width": "89px",  "min": "89px",  "max": "129px" },
+      "2col": { "width": "201px", "min": "201px", "max": "281px" },
+      "3col": { "width": "314px", "min": "314px", "max": "408px" }
+    },
+    "lg-nav-expanded": {
+      "1col": { "width": "111px", "min": "111px", "max": "237px" },
+      "2col": { "width": "246px", "min": "246px", "max": "499px" },
+      "3col": { "width": "380px", "min": "380px", "max": "761px" }
+    },
+    "lg-nav-collapsed": {
+      "1col": { "width": "129px", "min": "129px", "max": "255px" },
+      "2col": { "width": "282px", "min": "282px", "max": "535px" },
+      "3col": { "width": "434px", "min": "434px", "max": "815px" }
+    }
+  }
+}
