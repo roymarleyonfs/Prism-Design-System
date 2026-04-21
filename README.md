@@ -29,13 +29,20 @@ npm run dev            # start dev server
 ## Memory & Collaboration
 
 **Claude Code Memory Protocol:**  
-This project uses Claude's persistent memory system for collaboration context. Whenever memory is compacted or updated, the summary is automatically saved to `@Prompts/Compacted memory.md`. This file serves as the single source of truth for:
-- Project context and ongoing goals
-- Technical patterns and architectural decisions
-- Known issues, blockers, and resolutions
-- Component implementation status and validation results
+This project uses Claude's persistent memory system for collaboration context. The memory system tracks project state, progress, and context across sessions.
 
-**For team members:** Review `@Prompts/Compacted memory.md` when picking up work to understand the current state, recent changes, and any pending tasks.
+**How it works:**
+- **Automatic compaction**: When conversation context grows large, Claude compacts the session summary
+- **Manual compaction**: Use `/compact @Prompts/Compacted memory.md` to manually save a timestamped snapshot
+- **Single source of truth**: `@Prompts/Compacted memory.md` contains:
+  - Project context and ongoing goals
+  - Technical patterns and architectural decisions
+  - Known issues, blockers, and resolutions
+  - Component implementation status and validation results
+  - **Timestamp** of last update (shows when memory was last saved)
+  - **Save history** (timeline of previous compactions for audit trail)
+
+**For team members:** Review `@Prompts/Compacted memory.md` when picking up work to understand the current state. Check the timestamp and save history at the top of the file to see when context was last updated.
 
 ---
 
