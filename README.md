@@ -26,6 +26,19 @@ npm run dev            # start dev server
 
 ---
 
+## Memory & Collaboration
+
+**Claude Code Memory Protocol:**  
+This project uses Claude's persistent memory system for collaboration context. Whenever memory is compacted or updated, the summary is automatically saved to `@Prompts/Compacted memory.md`. This file serves as the single source of truth for:
+- Project context and ongoing goals
+- Technical patterns and architectural decisions
+- Known issues, blockers, and resolutions
+- Component implementation status and validation results
+
+**For team members:** Review `@Prompts/Compacted memory.md` when picking up work to understand the current state, recent changes, and any pending tasks.
+
+---
+
 ## Token pipeline
 
 Tokens live in `tokens/` as JSON, sourced directly from Figma Variables.  
