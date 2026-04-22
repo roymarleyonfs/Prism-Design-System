@@ -46,10 +46,10 @@ Multi-column configurations are achieved through composition, not separate desig
 ### Per-Cell Visual States
 - [ ] ✅ **Striping:** White background (rest)
 - [ ] ✅ **Striping:** Gray background (alternate rows)
-- [ ] **Hover State** - Subtle highlight on row hover
+- [x] ✅ **Hover State** - Subtle highlight on row hover
 - [ ] **Focus State** - Keyboard navigation focus ring
-- [ ] **Active State** - Currently selected row emphasis
-- [ ] **Disabled State** - Reduced opacity/grayed out
+- [x] ✅ **Active State** - Currently selected row emphasis
+- [x] ✅ **Disabled State** - Reduced opacity/grayed out
 - [ ] ✅ **Pinned Left** - Sticky to left with shadow
 - [ ] ✅ **Pinned Right** - Sticky to right with shadow
 
@@ -66,7 +66,7 @@ Multi-column configurations are achieved through composition, not separate desig
 ### Header Types
 - [ ] ✅ **Main Header** - Regular column header with text
 - [ ] ✅ **Check Header** - Checkbox column header (for select-all)
-- [ ] **Radio Header** - Radio column header (empty/no select-all)
+- [x] ✅ **Radio Header** - Radio column header (empty/no select-all)
 
 ### Header Features
 - [ ] ✅ **Sortable** - With sort icon and click handler
@@ -110,7 +110,7 @@ These define the visual table structure based on selection + action model:
 #### Multi Selection
 - [ ] ✅ **Multi Selection + Multi Actions** - Checkbox column + action column (multiple actions visible/menu)
 - [ ] ✅ **Multi Selection + Single Action** - Checkbox column + single action column
-- [ ] ⭕ **Multi Selection + Remove Action** - Checkbox column + delete/remove action only
+- [x] ✅ **Multi Selection + Remove Action** - Checkbox column + delete/remove action only
 - [ ] ⭕ **Multi Selection + No Actions** - Checkbox column only, no action column
 
 #### Single Selection  
@@ -125,7 +125,7 @@ The table's spatial structure is determined by which slots are in use. Multi-col
 - [ ] ✅ **No Pinning** - All columns in main content slot (everything scrolls)
 - [ ] ✅ **Pinned Left Only** - Pinned-left slot in use (with shadow), main slot scrolls
 - [ ] ✅ **Pinned Right Only** - Pinned-right slot in use (with shadow), main slot scrolls
-- [ ] ⭕ **Pinned Left + Right** - Both pinned slots in use (with shadows), main slot scrolls between
+- [x] ✅ **Pinned Left + Right** - Both pinned slots in use (with shadows), main slot scrolls between
 
 **Note:** Multi-column configurations (e.g., 2+ columns pinned left) are achieved by adding multiple columns to the pinned-left slot. This is composition, not a design variant. The visual treatment (shadow, spacing, z-index) is identical whether the pinned-left slot contains 1 or 3 columns.
 
@@ -171,8 +171,8 @@ The 19 cell variants (Text, Numeric, Badge, User, Image, etc.) are reusable buil
 ### Action Column Positions
 - [ ] **Actions on Right** - Standard position (action column in rightmost main slot or pinned-right slot)
 - [ ] **Actions on Left** - Alternative layout (action column in leftmost pinned-left slot)
-- [ ] ⭕ **Actions in Row** - Inline within row (hover-revealed or always visible) — behavioral variant, needs design
-- [ ] ⭕ **Actions Overflow Menu** - Kebab menu for 3+ actions — behavioral variant, needs design
+- [x] ✅ **Actions in Row** - Inline within row (hover-revealed or always visible) — behavioral variant, needs design
+- [x] ✅ **Actions Overflow Menu** - Kebab menu for 3+ actions — behavioral variant, needs design
 
 ### Radio Column + Content Combinations
 🔄 **Composition Pattern** — Achieved by placing Radio column in main/pinned slot alongside any cell type variant

@@ -85,7 +85,7 @@ export interface EmptyCellProps extends DataCellProps {
 }
 
 export interface HeaderCellProps extends React.HTMLAttributes<HTMLTableCellElement> {
-  variant: 'main' | 'check';
+  variant: 'main' | 'check' | 'radio';
   children?: React.ReactNode;
   sortable?: boolean;
   onSort?: () => void;
