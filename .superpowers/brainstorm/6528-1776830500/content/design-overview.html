@@ -1,0 +1,124 @@
+<h2>Figma Library Generation — Design Overview</h2>
+<p class="subtitle">6 high-priority Data Table components • Optimizing-Table file • All 6 in one pass</p>
+
+<div class="section">
+  <h3>Phase 1 — Codebase Audit (before touching Figma)</h3>
+  <p>Files we'll read to map code → Figma:</p>
+  <ul style="margin: 8px 0 0 20px; line-height: 2;">
+    <li><code>src/components/Table/types.ts</code> — All variant types, prop interfaces, accent/state enums</li>
+    <li><code>src/components/Table/cells/DataCell.tsx</code> — Striping, pinning, variant rendering</li>
+    <li><code>src/components/Table/cells/HeaderCell.tsx</code> — Sort states, check header</li>
+    <li><code>src/components/Table/cells/FooterCell.tsx</code> — Summary row structure</li>
+    <li><code>src/components/Table/hooks/useCellVariant.ts</code> — Column-to-cell resolution logic</li>
+    <li><code>tokens/colors.json</code> — Exact color values for Figma fills</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h3>Phase 2 — The 6 Components to Generate</h3>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 12px;">
+
+    <div style="background: #f8f9fa; border: 1px solid #e0e0e0; border-radius: 8px; padding: 16px;">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+        <span style="background:#0084ff;color:#fff;border-radius:50%;width:22px;height:22px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0;">1</span>
+        <strong>Radio Selection Variants</strong>
+      </div>
+      <p style="font-size:13px;color:#555;margin:0 0 8px;">Figma component: <code>DataTable / Cell / Radio</code></p>
+      <div style="font-size:12px;color:#666;">
+        <div style="margin-bottom:4px;"><strong>Variants:</strong></div>
+        <div>• State=Unchecked</div>
+        <div>• State=Checked</div>
+        <div>• State=Disabled</div>
+        <div style="margin-top:6px;"><strong>+</strong> RadioHeader (empty, no select-all)</div>
+      </div>
+    </div>
+
+    <div style="background: #f8f9fa; border: 1px solid #e0e0e0; border-radius: 8px; padding: 16px;">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+        <span style="background:#0084ff;color:#fff;border-radius:50%;width:22px;height:22px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0;">2</span>
+        <strong>Multi Selection + Remove Action</strong>
+      </div>
+      <p style="font-size:13px;color:#555;margin:0 0 8px;">Figma frame: <code>DataTable / Config / Multi + Remove</code></p>
+      <div style="font-size:12px;color:#666;">
+        <div style="margin-bottom:4px;"><strong>Shows:</strong></div>
+        <div>• Checkbox column (pinned left)</div>
+        <div>• 2–3 content columns (main slot)</div>
+        <div>• Delete/trash action column (pinned right)</div>
+        <div>• Header row + 3 data rows</div>
+      </div>
+    </div>
+
+    <div style="background: #f8f9fa; border: 1px solid #e0e0e0; border-radius: 8px; padding: 16px;">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+        <span style="background:#0084ff;color:#fff;border-radius:50%;width:22px;height:22px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0;">3</span>
+        <strong>Pinned Left + Right Simultaneously</strong>
+      </div>
+      <p style="font-size:13px;color:#555;margin:0 0 8px;">Figma frame: <code>DataTable / Config / Pinned Both</code></p>
+      <div style="font-size:12px;color:#666;">
+        <div style="margin-bottom:4px;"><strong>Shows:</strong></div>
+        <div>• Left pinned col (shadow right edge)</div>
+        <div>• Main scrolling area (truncated)</div>
+        <div>• Right pinned col (shadow left edge)</div>
+        <div>• Both shadow tokens documented</div>
+      </div>
+    </div>
+
+    <div style="background: #f8f9fa; border: 1px solid #e0e0e0; border-radius: 8px; padding: 16px;">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+        <span style="background:#0084ff;color:#fff;border-radius:50%;width:22px;height:22px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0;">4</span>
+        <strong>Row Hover / Active States</strong>
+      </div>
+      <p style="font-size:13px;color:#555;margin:0 0 8px;">Figma component: <code>DataTable / Row / States</code></p>
+      <div style="font-size:12px;color:#666;">
+        <div style="margin-bottom:4px;"><strong>Variants:</strong></div>
+        <div>• State=Default (white / gray striped)</div>
+        <div>• State=Hover</div>
+        <div>• State=Selected</div>
+        <div>• State=Hover+Selected</div>
+        <div>• State=Disabled</div>
+      </div>
+    </div>
+
+    <div style="background: #f8f9fa; border: 1px solid #e0e0e0; border-radius: 8px; padding: 16px;">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+        <span style="background:#0084ff;color:#fff;border-radius:50%;width:22px;height:22px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0;">5</span>
+        <strong>Actions in Row (Inline)</strong>
+      </div>
+      <p style="font-size:13px;color:#555;margin:0 0 8px;">Figma component: <code>DataTable / Cell / Actions / Inline</code></p>
+      <div style="font-size:12px;color:#666;">
+        <div style="margin-bottom:4px;"><strong>Variants:</strong></div>
+        <div>• Visibility=Always (always shown)</div>
+        <div>• Visibility=Hover (revealed on row hover)</div>
+        <div>• 1, 2, 3 action link configs</div>
+      </div>
+    </div>
+
+    <div style="background: #f8f9fa; border: 1px solid #e0e0e0; border-radius: 8px; padding: 16px;">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+        <span style="background:#0084ff;color:#fff;border-radius:50%;width:22px;height:22px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0;">6</span>
+        <strong>Actions Overflow Menu</strong>
+      </div>
+      <p style="font-size:13px;color:#555;margin:0 0 8px;">Figma component: <code>DataTable / Cell / Actions / Overflow</code></p>
+      <div style="font-size:12px;color:#666;">
+        <div style="margin-bottom:4px;"><strong>Variants:</strong></div>
+        <div>• Menu=Closed (kebab icon only)</div>
+        <div>• Menu=Open (dropdown with items)</div>
+        <div>• Item=Default / Disabled / Destructive</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="section">
+  <h3>Phase 3 — Figma Organization</h3>
+  <div style="background: #f8f9fa; border: 1px solid #e0e0e0; border-radius: 8px; padding: 16px; font-size: 13px;">
+    <div style="margin-bottom:8px;"><strong>Target file:</strong> Optimizing-Table (<code>S9ZjLU7KVD3VV6THh2TI7z</code>)</div>
+    <div style="margin-bottom:8px;"><strong>Token source:</strong> <code>tokens/colors.json</code> → exact fills (no guessing hex values)</div>
+    <div style="margin-bottom:8px;"><strong>Naming convention:</strong> <code>DataTable / [Category] / [Variant]</code></div>
+    <div><strong>Layout:</strong> Auto-layout components for cells/rows; configuration frames for table-level states</div>
+  </div>
+</div>
+
+<p style="margin-top: 24px; color: #666; font-size: 13px;">Does this structure look right? Anything to adjust before we write the spec?</p>
