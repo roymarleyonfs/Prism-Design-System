@@ -244,7 +244,7 @@ Name: DataTable / Row / States
 Auto-layout: Horizontal, align center
 Width: 728px, Height: 48px
 
-Variant property "State": Default | Hover | Selected | Hover+Selected | Disabled
+Variant property "State": Default | Hover | Selected | Hover Selected | Disabled
 Variant property "Striped": White | Gray
 
 Each variant contains these columns (left to right):
@@ -261,8 +261,8 @@ Background fills:
   Hover / Gray:           #ebebeb
   Selected / White:       #e5f2ff
   Selected / Gray:        #e5f2ff  (selection color overrides stripe)
-  Hover+Selected / White: #b7dbff
-  Hover+Selected / Gray:  #b7dbff  (selection color overrides stripe)
+  Hover Selected / White: #b7dbff
+  Hover Selected / Gray:  #b7dbff  (selection color overrides stripe)
   Disabled / White:       #ffffff
   Disabled / Gray:        #f5f5f5
 
@@ -283,7 +283,7 @@ Call `mcp__claude_ai_Figma__get_screenshot` on the `DataTable / Row / States` co
 
 Confirm:
 - 10 variants in grid
-- Blue tones on Selected / Hover+Selected variants
+- Blue tones on Selected / Hover Selected variants
 - Disabled row text visibly gray vs Default
 
 ---
